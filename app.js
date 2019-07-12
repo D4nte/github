@@ -1,7 +1,10 @@
 const GitHub = require('github-api');
+const fs = require('fs');
+
+const token = fs.readFileSync("./github-token", {encoding: 'utf-8'});
 
 const gh = new GitHub({
-  token: '23ec0e8b192e91fc2e94d9d46faa39ac9703f34f'
+  token
 });
 
 
